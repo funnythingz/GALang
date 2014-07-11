@@ -1,0 +1,6 @@
+{
+  "name": "angular-typescript-iroiro",
+  "dependencies": {
+    "angular" : "https://github.com/angular/bower-angular.git#*"
+  }
+}
