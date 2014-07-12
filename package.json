@@ -1,7 +1,7 @@
 {
-  "name": "totsuzen",
+  "name": "GalGene",
   "version": "0.0.0",
-  "description": "totsuzen",
+  "description": "Gal lang generator",
   "author": "funnythingz",
   "license": "BSD",
   "devDependencies": {
@@ -13,6 +13,8 @@
     "grunt-contrib-compass": "latest",
     "grunt-contrib-connect": "latest",
     "grunt-contrib-copy": "latest",
+    "grunt-gh-pages": "",
+    "grunt-open": "",
     "testem": "~0.6.2",
     "chai": "~1.9.0"
   }

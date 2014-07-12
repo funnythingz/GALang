@@ -7,9 +7,12 @@ module.exports = (grunt)->
   grunt.loadNpmTasks('grunt-contrib-connect')
   grunt.loadNpmTasks('grunt-contrib-clean')
   grunt.loadNpmTasks('grunt-contrib-copy')
+  grunt.loadNpmTasks('grunt-gh-pages')
+  grunt.loadNpmTasks('grunt-open')
 
-  grunt.registerTask('default', ['clean', 'typescript', 'uglify', 'copy', 'compass'])
-  grunt.registerTask('server', ['connect'])
+  grunt.registerTask('build', ['clean', 'typescript', 'uglify', 'copy', 'compass'])
+  grunt.registerTask('server', ['connect', 'open', 'watch'])
+  grunt.registerTask('default', 'server')
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json')
@@ -64,7 +67,7 @@ module.exports = (grunt)->
     watch:
       typescript:
         files: ['src/ts/**/*.ts', 'tests/**/*.ts']
-        tasks: ['clean', 'typescript', 'uglify', 'copy', 'compass']
+        tasks: ['clean', 'typescript', 'uglify', 'copy']
         options:
           atBegin: true
 
@@ -82,11 +85,15 @@ module.exports = (grunt)->
 
     clean: ['dist/*']
 
+    open:
+        dist:
+            path: 'http://localhost:8000'
+
     connect:
-      server:
-        options:
-          port: 8000
-          base: 'dist'
-          keepalive: true
+        dist:
+            options:
+                port: 8000
+                base: 'dist'
+                livereload: true
 
   })
