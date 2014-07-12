@@ -1,1 +1,1 @@
-# GalGene
+# GALang
