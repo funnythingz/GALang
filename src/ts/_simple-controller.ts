@@ -7,7 +7,6 @@ module App {
     export class SimpleController {
 
         constructor(private $scope: ISimpleScope) {
-
         }
 
     }

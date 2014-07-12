@@ -1,16 +1,37 @@
-<!Doctype html><html lang="en" ng-app="app"><head><meta charset="utf-8"><title>totsuzen</title>
+<!Doctype html><html lang="en" ng-app="app"><head><meta charset="utf-8"><title>GALang</title>
 <link rel="stylesheet" href="http://groundworkcss.github.io/groundwork/css/groundwork.css">
 <link rel="stylesheet" href="style.css">
 <script src="js/angular.min.js"></script>
 <script src="app.js"></script>
 </head><body ng-controller="simpleCtrl">
 
-  <div class="container">
-    <section>
-      <input type="text" ng-model="hoge">
+  <header class="header">
+    <div class="container">
+      <h1>GALang</h1>
+    </div>
+  </header>
 
-      <p>{{hoge}}</p>
-    </section>
-  </div>
+  <section class="content">
+    <div class="container">
+      <div class="row">
+        <div class="one half whole padded">
+          <label for="message" class="large pink">にゅうりょく</label>
+          <textarea id="inMessage" class="inMessage question-bg" placeholder="へんかんしたぃめっせーじをぃれてね" ng-model="inMessage"></textarea>
+        </div>
+        <div class="one half whole padded">
+          <label for="message" class="large pink">しゅつりょく</label>
+          <div id="outMessage" class="outMessage">{{outMessage}}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container padded">
+      <div class="copyright">
+        <a href="//www.funnythingz.com">&copy; funnythingz</a>
+      </div>
+    </div>
+  </footer>
 
 </body></html>

@@ -1,17 +1,32 @@
 @charset "utf-8";
 
 @import "compass/css3";
+@import url(http://fonts.googleapis.com/css?family=Chewy);
 
 body {
-  background-color: #f1f2f3;
+  background-color: #FFC2E1;
   font-family: Helvetica, arial, freesans, clean, sans-serif;
 }
 
+.header {
+  background-color: #A082C3;
+}
+
 h1 {
-  color: #123;
+  color: #fff;
+  font-family: 'Chewy', cursive;
+  font-size: 72px;
+  padding: 0 0 10px 10px;
+  margin: 0;
   @include text-shadow(0 1px 0 #c7c8c9);
 }
 
-.entry {
-  margin-bottom: .5em;
+.inMessage {
+  min-height: 300px;
+  font-size: 24px;
+}
+
+.copyright {
+  margin: 10px 0;
+  text-align: center;
 }
