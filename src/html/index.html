@@ -15,12 +15,12 @@
     <div class="container">
       <div class="row">
         <div class="one half whole padded">
-          <label for="message" class="large pink">にゅうりょく</label>
-          <textarea id="inMessage" class="inMessage question-bg" placeholder="へんかんしたぃめっせーじをぃれてね" ng-model="inMessage"></textarea>
+          <label for="message" class="large pink">へんかんまえ</label>
+          <textarea id="inMessage" class="inMessage question-bg" placeholder="へんかんしたぃめっせーじをぃれてね" ng-model="inMessage" maxlength="120" ng-maxlength="120"></textarea>
         </div>
         <div class="one half whole padded">
-          <label for="message" class="large pink">しゅつりょく</label>
-          <div id="outMessage" class="outMessage">{{outMessage}}</div>
+          <label for="message" class="large pink">へんかんご</label>
+          <div id="outMessage" class="outMessage">{{encodeGalang(inMessage)}}</div>
         </div>
       </div>
     </div>
